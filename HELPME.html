@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Login in whytt operating system</title>
+<meta name="generator" content="WYSIWYG Web Builder 18 - https://www.wysiwygwebbuilder.com">
+<link href="login_04.css" rel="stylesheet">
+<link href="HELPME.css" rel="stylesheet">
+<script src="jquery-3.7.1.min.js"></script>
+<script src="wb.validation.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#Form1").submit(function(event)
+   {
+      var isValid = $.validate.form(this);
+      return isValid;
+   });
+   $("#Editbox2").validate(
+   {
+      required: true,
+      bootstrap: true,
+      type: 'custom',
+      param: /^[Q]*$/,
+      length_min: '1',
+      length_max: '1',
+      color_text: '#000000',
+      color_hint: '#00FF00',
+      color_error: '#FF0000',
+      color_border: '#808080',
+      nohint: false,
+      font_family: 'Arial',
+      font_size: '13px',
+      position: 'topleft',
+      offsetx: 0,
+      offsety: 0,
+      effect: 'none',
+      error_text: 'Неверный код!'
+   });
+});
+</script>
+</head>
+<body>
+<div id="Layer1" style="position:fixed;text-align:left;left:0;top:0;right:0;bottom:0;z-index:5;min-wight:1920px;">
+<div id="wb_Form1" style="position:absolute;left:0px;top:0px;width:1466px;height:321px;z-index:2;">
+<form name="Q" method="post" action="./страница1.html" enctype="multipart/form-data" id="Form1">
+<div id="wb_Editbox2" style="position:absolute;left:987px;top:24px;width:206px;height:47px;z-index:0;">
+<input type="text" id="Editbox2" style="" name="Editbox2" value="" maxlength="5" autocomplete="off" spellcheck="false">
+<div class="invalid-feedback">Неверный код!</div></div>
+<label for="Editbox2" id="Label1" style="position:absolute;left:17px;top:25px;width:1090px;height:37px;line-height:37px;z-index:1;">Для входа в систему необходимо ввести секретный код:</label>
+</form>
+</div>
+</div>
+</body>
+</html>
